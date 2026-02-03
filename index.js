@@ -7,8 +7,8 @@
 
 import crypto from 'crypto'
 
-const creds = (process.env.CRED || "").split('\n').map(s => s.trim()).filter(Boolean)
-const tokens = (process.env.TOKEN || "").split('\n').map(s => s.trim()).filter(Boolean)
+const creds = (process.env.SK_OAUTH_CRED_KEY || "").split('\n').map(s => s.trim()).filter(Boolean)
+const tokens = (process.env.SK_TOKEN_CACHE_KEY || "").split('\n').map(s => s.trim()).filter(Boolean)
 const discordWebhook = process.env.DISCORD_WEBHOOK
 const discordUser = process.env.DISCORD_USER
 
