@@ -286,7 +286,11 @@ async function discordWebhookSend() {
 
 // Main execution
 if (!creds || !creds.length) {
-  throw new Error('CRED environment variable not set!')
+  throw new Error('SK_OAUTH_CRED_KEY environment variable not set!')
+}
+
+if (!tokens || !tokens.length) {
+  throw new Error('SK_TOKEN_CACHE_KEY environment variable not set!')
 }
 
 for (const index in creds) {
